@@ -1,0 +1,19 @@
+denoising_step_list:
+- 1000
+- 750
+- 500
+- 250
+warp_denoising_step: true
+timestep_shift: 5.0
+num_frame_per_block: 3
+
+wan_model_folder: "./checkpoints/Wan2.1-T2V-1.3B"
+
+generator:
+  model_path: "./checkpoints/Wan2.1-T2V-1.3B"
+  in_dim: 36
+
+dataset:
+  video_size:
+  - 480
+  - 832

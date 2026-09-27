@@ -1,0 +1,6 @@
+warp_denoising_step: false
+causal: true
+
+height: 480
+width: 832
+num_frames: 81

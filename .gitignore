@@ -1,0 +1,22 @@
+# Exclude checkpoints, output, and generated preprocessing files
+checkpoints/
+checkpoints
+output/
+logs/
+examples/*/preprocessed/
+examples/video_example_*/depth/
+inference_metadata.json
+.claude
+.ruff_cache
+condaenv.pkapro9t.requirements.txt
+
+# Common Python ignores
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+.env

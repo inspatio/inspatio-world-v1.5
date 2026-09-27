@@ -1,0 +1,40 @@
+name: inspatio_world_test
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - packaging
+  - setuptools
+  - wheel
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu126
+      - torch==2.10.0+cu126
+      - torchvision==0.25.0+cu126
+      - av==13.1.0
+      - addict==2.4.0
+      - decord==0.6.0
+      - diffusers==0.37.0
+      - easydict==1.13
+      - einops==0.8.2
+      - evo==1.34.3
+      - ftfy==6.3.1
+      - imageio==2.37.3
+      - moviepy==1.0.3
+      - ninja==1.11.1.1
+      - numpy==1.26.4
+      - omegaconf==2.3.0
+      - opencv-python==4.11.0.86
+      - Pillow==12.0.0
+      - plyfile==1.1.3
+      - pycolmap==4.0.2
+      - regex==2026.2.28
+      - requests==2.32.5
+      - safetensors==0.7.0
+      - scipy==1.15.3
+      - tqdm==4.67.3
+      - transformers==4.57.6
+      - trimesh==4.11.3
+# DA3 declares app/benchmark dependencies that are not needed for this inference path.
+# After creating the environment, install the DA3 package separately:
+# python -m pip install --no-deps depth-anything-3==0.1.1

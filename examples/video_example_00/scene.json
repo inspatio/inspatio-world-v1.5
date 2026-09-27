@@ -1,0 +1,14 @@
+{
+  "output_id": "video_example_00",
+  "kind": "video",
+  "views": 247,
+  "frames": 247,
+  "valid_frames": 247,
+  "fps": 24,
+  "resolution": [
+    480,
+    832
+  ],
+  "target_intrinsics": "estimated_source_frame_000000_fixed",
+  "depth_encoding": "uint16_minmax_v1"
+}

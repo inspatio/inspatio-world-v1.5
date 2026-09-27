@@ -1,0 +1,14 @@
+{
+  "output_id": "multiview_example_00",
+  "kind": "image",
+  "views": 4,
+  "frames": 141,
+  "valid_frames": 130,
+  "fps": 15.0,
+  "resolution": [
+    480,
+    832
+  ],
+  "target_intrinsics": "estimated_source_view_00_fixed",
+  "depth_encoding": "uint16_minmax_v1"
+}
