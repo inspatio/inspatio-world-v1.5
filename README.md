@@ -7,6 +7,15 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2604.07209-b31b1b)](https://arxiv.org/abs/2604.07209)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-blue?logo=googlechrome&logoColor=white)](https://world.inspatio.com/)
 
+## Examples
+
+| Real-time inference results (single-image input) | Real-time inference results (multi-image input) |
+| --- | --- |
+| ![Real-time inference results (single-image input)](assets/readme/image_prediction.gif) | ![Real-time inference results (multi-image input)](assets/readme/multi_image_prediction.gif) |
+
+The examples show real-time inference results with a single input image (left)
+and four input images (right).
+
 ## Requirements
 
 - Python 3.10
@@ -25,14 +34,7 @@ python -m pip install --no-deps depth-anything-3==0.1.1
 
 `environment.yml` includes the packages DA3 uses on this inference path. The separate command avoids installing its unrelated app and benchmark dependencies.
 
-**Optional: install FlashAttention-3 on Hopper GPUs for faster attention:**
-```bash
-export CUDA_HOME=/path/to/cuda-12.6
-export PATH="$CUDA_HOME/bin:$PATH"
-python -m pip install --no-build-isolation 'flash-attn-3 @ git+https://github.com/Dao-AILab/flash-attention.git@d15f1531a460ba456f41b01a774f33ab2db8febf#subdirectory=hopper'
-```
-
-This step requires a CUDA toolkit with `nvcc`. Without FA3, inference uses PyTorch's scaled dot product attention.
+On Hopper GPUs, we recommend installing FlashAttention-3 (FA3) for faster attention.
 
 ## Model Weights
 
@@ -91,13 +93,6 @@ The runner reads the video's fps and frame count, resizes it to 832×480 if need
 and estimates depth and per-frame source cameras with DA3. The target trajectory must use
 the same first-frame-normalized coordinate system and displacement scale as
 the estimated source cameras.
-
-## Development checks
-
-```bash
-python -m unittest discover -s tests -v
-ruff check .
-```
 
 ## License
 
